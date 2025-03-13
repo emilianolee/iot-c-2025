@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="array.c" />
+    <ClCompile Include="char.c" />
     <ClCompile Include="pointer.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

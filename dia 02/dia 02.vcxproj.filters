@@ -15,7 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\day02\funcCalculation.c">
+    <ClCompile Include="casting.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="IfSwich.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ForWhile.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="OperateShift.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="func.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="funcCalculator.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
