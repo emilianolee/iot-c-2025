@@ -49,6 +49,9 @@
 //	return 0;
 //}
 
+/*
+	두 값을 바꾸는 알고리즘
+*/
 #include <stdio.h>
 
 int main()
