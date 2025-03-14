@@ -54,29 +54,56 @@
 //	return 0;
 //}
 
-#define _CRT_SECURE_NO_WARNINGS
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char ch1;
+//	char ch2 = 'A';
+//
+//	printf("대소문자 입력 프로그램입니다\n");
+//	printf("변환 하고 싶은 알파벳을 작성해주세요.\n");
+//	scanf("%c", &ch2);
+//	if ((ch2 >= 'A') && (ch2 <= 'Z')) {
+//		ch1 = ch2 + ('a' - 'A');
+//		printf("변환 완료!\t");
+//		printf("변환값 : %c", ch1);
+//	}
+//	else if ((ch2 >= 'a') && (ch2 <= 'z')) {
+//		ch1 = ch2 - ('a' - 'A');
+//		printf("변환 완료!\t");
+//		printf("변환값 : %c", ch1);
+//	}
+//	else {
+//		printf("잘못된 값을 작성하셨습니다. 다시 작성해주세요.");
+//	}
+//	return 0;
+//}
+
 #include <stdio.h>
+
+void myStrInput(char *, int);
 
 int main()
 {
-	char ch1;
-	char ch2 = 'A';
+	char str[100];			// 문자열을 저장할 배열
 
-	printf("대소문자 입력 프로그램입니다\n");
-	printf("변환 하고 싶은 알파벳을 작성해주세요.\n");
-	scanf("%c", &ch2);
-	if ((ch2 >= 'A') && (ch2 <= 'Z')) {
-		ch1 = ch2 + ('a' - 'A');
-		printf("변환 완료!\t");
-		printf("변환값 : %c", ch1);
-	}
-	else if ((ch2 >= 'a') && (ch2 <= 'z')) {
-		ch1 = ch2 - ('a' - 'A');
-		printf("변환 완료!\t");
-		printf("변환값 : %c", ch1);
-	}
-	else {
-		printf("잘못된 값을 작성하셨습니다. 다시 작성해주세요.");
-	}
+	myStrInput(str, sizeof(str));
+	printf("입력한 문자열: %s\n", str);
+
 	return 0;
+}
+
+void myStrInput(char *ps, int size)
+{
+	int i = 0;
+	while (1) {
+		ps[i] = getchar();
+		if (ps[i] == '\n' || i >= (size - 1))
+			break;
+		else 
+			i++;
+			}
+	ps[i] = '\0';
 }
